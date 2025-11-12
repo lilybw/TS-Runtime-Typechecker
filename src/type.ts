@@ -19,7 +19,7 @@ export const isValidNumber = (arg: number): boolean => {
 /**
  * Complete runtime type checking for objects
  * @since 0.0.1
- * @author GustavBW
+ * @author lilybw
  */
 export const conformsToType = <T>(object: T, topLevelValidator: TypeDeclaration | FieldValidatorFunction | Type): Error | undefined => {
     if (typeof topLevelValidator === 'string') {
@@ -137,7 +137,7 @@ const validateOptionalType = (value: any, validator: AbstractValidator): boolean
 /**
  * Same as T | undefined
  * @since 0.0.1
- * @author GustavBW
+ * @author lilybw
  */
 const optionalType = (validator: AbstractValidator): FieldValidatorFunction => {
     const wrappedValidator = (value: any) => validateOptionalType(value, validator);
